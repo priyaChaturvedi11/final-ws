@@ -41,7 +41,7 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 2em;
+  padding: 2em 1em 2em 1em;
 }
 
 header .logo {
@@ -55,9 +55,9 @@ header nav ul {
   display: flex;
 }
 
-header nav ul a {
+header nav ul li a {
   display: block;
-  padding: 0 1em;
+  padding: 0 0.5em 0 0;
 }
 
 .banner-social,
