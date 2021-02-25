@@ -251,8 +251,8 @@
     <script>
       $('#testimonial-carousel').owlCarousel({
           autoplay:true,
-          dots: false,
-          nav: true,
+          dots: true,
+          nav: false,
           loop:true,
           navText:['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
           responsive:{
@@ -261,7 +261,17 @@
               },
               600:{
                   items:1
-              },
+              }
+          }
+      })
+
+      $('#testimonial-carousel').owlCarousel({
+          autoplay:true,
+          dots: false,
+          nav: true,
+          loop:true,
+          navText:['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+          responsive:{
               800:{
                 items:2
               },

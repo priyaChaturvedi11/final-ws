@@ -42,6 +42,10 @@ header .logo {
   font-weight: bold;
 }
 
+header nav {
+  float: right;
+}
+
 header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -184,9 +188,9 @@ section {
 
 .testimonial-container {
   background: #fff;
-  padding: 2em;
+  padding: 2em 0;
   border-radius: 1em;
-  margin: 2em;
+  margin: 0;
 }
 
 .testimonial-container {
@@ -215,7 +219,7 @@ section {
 
 .testimonial-item-title {
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: .5em;
   letter-spacing: .1em;
   color: rgba(65, 223, 223, 0.86);
 }
@@ -225,31 +229,28 @@ section {
   color: #616161;
 }
 
-.testimonials div.owl-nav {
-  color: #FFFF;
-  display: inline-block;
-  font-size: 5em;
-  margin-top: -3em;
-  text-align: center;
-  width: 5em;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.owl-prev, .owl-next {
-  position: absolute;
-}
-
-.owl-prev {
-  left: -20px;
-  top: 50%;
-}
-
-.owl-next {
-  right: -20px;
-  top: 50%;
-}
-
+/*
+.testimonials div.owl-nav{
+    color: #FFFF;
+    display: inline-block;
+    font-size: 5em;
+    margin-top: -3em;
+    text-align: center;
+    width: 5em;
+    transition: 0.3s;
+  }
+  .owl-prev, .owl-next{
+    position: absolute;
+  }
+  .owl-prev{
+    left: -20px;
+    top: 50%;
+  }
+  .owl-next{
+    right: -20px;
+    top: 50%;
+  }
+*/
 /*
 .community-links{
     position: relative;

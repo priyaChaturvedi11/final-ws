@@ -38,6 +38,7 @@ body{
     }
 
     nav{
+        float: right;
         ul{
             display: flex;
 
@@ -187,9 +188,9 @@ section{
 
 .testimonial-container{
     background: #fff;
-    padding: 2em;
+    padding: 2em 0;
     border-radius: 1em;
-    margin: 2em;
+    margin: 0;
 }
 
 .testimonial-container{
@@ -210,7 +211,7 @@ section{
 
 .testimonial-item-title{
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: .5em;
     letter-spacing: .1em;
     color:rgba(65, 223, 223, 0.86); 
 }
@@ -219,7 +220,7 @@ section{
     font-weight: bold;
     color: #616161; 
 }
-
+/*
 .testimonials div.owl-nav{
     color: #FFFF;
     display: inline-block;
@@ -240,7 +241,7 @@ section{
     right: -20px;
     top: 50%;
   }
-  
+*/  
 /*
 .community-links{
     position: relative;
