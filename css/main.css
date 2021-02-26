@@ -1,6 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
-  height: 100vh;
+  min-height: 100%;
   margin: 0;
   font-family: 'Poppins', arial;
 }
@@ -34,16 +41,12 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 2em 1em 2em 1em;
+  padding: 2em;
 }
 
 header .logo {
   color: white;
   font-weight: bold;
-}
-
-header nav {
-  float: right;
 }
 
 header nav ul {
@@ -52,9 +55,9 @@ header nav ul {
   display: flex;
 }
 
-header nav ul li a {
+header nav ul a {
   display: block;
-  padding: 0 0.5em 0 0;
+  padding: 0 1em;
 }
 
 .banner-social,
@@ -188,9 +191,9 @@ section {
 
 .testimonial-container {
   background: #fff;
-  padding: 2em 0;
+  padding: 2em;
   border-radius: 1em;
-  margin: 0;
+  margin: 2em;
 }
 
 .testimonial-container {
@@ -219,7 +222,7 @@ section {
 
 .testimonial-item-title {
   font-weight: bold;
-  font-size: .5em;
+  font-size: 1.5em;
   letter-spacing: .1em;
   color: rgba(65, 223, 223, 0.86);
 }
@@ -229,28 +232,31 @@ section {
   color: #616161;
 }
 
-/*
-.testimonials div.owl-nav{
-    color: #FFFF;
-    display: inline-block;
-    font-size: 5em;
-    margin-top: -3em;
-    text-align: center;
-    width: 5em;
-    transition: 0.3s;
-  }
-  .owl-prev, .owl-next{
-    position: absolute;
-  }
-  .owl-prev{
-    left: -20px;
-    top: 50%;
-  }
-  .owl-next{
-    right: -20px;
-    top: 50%;
-  }
-*/
+.testimonials div.owl-nav {
+  color: #FFFF;
+  display: inline-block;
+  font-size: 5em;
+  margin-top: -3em;
+  text-align: center;
+  width: 5em;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.owl-prev, .owl-next {
+  position: absolute;
+}
+
+.owl-prev {
+  left: -20px;
+  top: 50%;
+}
+
+.owl-next {
+  right: -20px;
+  top: 50%;
+}
+
 /*
 .community-links{
     position: relative;
@@ -380,27 +386,6 @@ section {
         text-align: left;
     }
 */
-  .testimonials div.owl-nav {
-    color: #FFFF;
-    display: inline-block;
-    font-size: 5em;
-    margin-top: -3em;
-    text-align: center;
-    width: 5em;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-  }
-  .owl-prev, .owl-next {
-    position: absolute;
-  }
-  .owl-prev {
-    left: -20px;
-    top: 50%;
-  }
-  .owl-next {
-    right: -20px;
-    top: 50%;
-  }
   .highlights-container {
     margin-bottom: -7em;
     padding-top: 4em;
