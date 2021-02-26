@@ -345,13 +345,15 @@
     }
 
     .footer-images{
-        img{
-            height: 80px;
-            padding: 0;
-        }
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
+        img{
+            padding: 0em 2em;
+            height: 100px;
+            width: 100px;
+        }
     }
 /* ==========
    Copyright Section
@@ -362,4 +364,29 @@
        font-size: 0.6rem;
        background: #4441DF;
        color: #78dddd;
+   }
+
+   @media only screen and (min-width: 800px){
+    .banner{
+        padding: 8em;
+    }
+    .highlights-container{
+        margin-bottom: -4em;
+    }
+    .highlights-container ul{
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-gap: .35em;
+    }
+    
+    .teams-container ul{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        li{
+            width: 33.33%;
+        }
+    }
    }

@@ -395,14 +395,18 @@ header nav ul li a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer-images img {
-  height: 80px;
-  padding: 0;
+  padding: 0em 2em;
+  height: 100px;
+  width: 100px;
 }
 
 /* ==========
@@ -414,5 +418,37 @@ header nav ul li a {
   font-size: 0.6rem;
   background: #4441DF;
   color: #78dddd;
+}
+
+@media only screen and (min-width: 800px) {
+  .banner {
+    padding: 8em;
+  }
+  .highlights-container {
+    margin-bottom: -4em;
+  }
+  .highlights-container ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
+    grid-gap: .35em;
+  }
+  .teams-container ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .teams-container ul li {
+    width: 33.33%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
