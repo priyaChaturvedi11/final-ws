@@ -359,8 +359,27 @@ section{
         text-align: left;
     }
 */
-
-    .highlights-container{
+    .testimonials div.owl-nav{
+        color: #FFFF;
+        display: inline-block;
+        font-size: 5em;
+        margin-top: -3em;
+        text-align: center;
+        width: 5em;
+        transition: 0.3s;
+    }
+    .owl-prev, .owl-next{
+        position: absolute;
+    }
+    .owl-prev{
+        left: -20px;
+        top: 50%;
+    }
+    .owl-next{
+        right: -20px;
+        top: 50%;
+    }
+        .highlights-container{
         margin-bottom: -7em;
         padding-top: 4em;
     }
