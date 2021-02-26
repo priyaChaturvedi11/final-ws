@@ -345,14 +345,12 @@
     }
 
     .footer-images{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        display: grid;
+        place-content: center;
         img{
-            padding: 0em 2em;
             height: 100px;
             width: 100px;
+            border-radius: 50%;
         }
     }
 /* ==========
@@ -389,4 +387,12 @@
             width: 33.33%;
         }
     }
+   }
+
+   @media only screen and (min-width: 1000px){
+        .banner{
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 80% auto;
+        }
    }
