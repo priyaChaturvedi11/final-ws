@@ -425,6 +425,8 @@ header nav ul li a {
     -ms-grid-columns: (auto)[3];
         grid-template-columns: repeat(3, auto);
     grid-gap: .2em;
+    padding-left: 4em;
+    padding-right: 4em;
   }
   .teams-container ul {
     display: -webkit-box;
