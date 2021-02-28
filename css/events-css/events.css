@@ -192,7 +192,6 @@ a:hover {
 }
 
 
-}
 
 /* line 74, E:/170 Kanox Agency/170_Kanox_Agency_html/sass/_common.scss */
 h1,
@@ -5644,10 +5643,11 @@ ul {
 .hover img {
     opacity: 0.5;
 }
+/*
 .hover img:hover {
     color: #;
 }
-
+*/
 /**************** team_part css start ****************/
 
 /* line 2, E:/170 Kanox Agency/170_Kanox_Agency_html/sass/_team.scss */
