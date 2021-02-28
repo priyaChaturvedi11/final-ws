@@ -90,7 +90,8 @@
     
     .about,
     .highlights,
-    .teams,
+
+    .s-section,
     .testimonials,
     .community-links,
     .footer{
@@ -105,7 +106,8 @@
     .highlights,
     .teams,
     .testimonials,
-    .community-links
+    .community-links,
+    .s-section
     {
         padding-bottom: 1em;
     }
@@ -224,12 +226,60 @@
 /* ==========
    Teams
    ========== */
-   .team-item-container{
-       display: none;
-   }
-    .teams-container ul li{
-        background: rgba(68, 65, 223, 0.4);
+    .inner-width{
+        width: 100%;
+        max-width: 600px;
+        margin: auto;
+        //padding: 0 2em;
+        overflow: hidden;
     }
+    .s-title{
+        color: #616161;
+    }
+    .s-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .s-box{
+        max-width: 100%;
+        text-align: center;
+        background: rgba(68, 65, 223, 0.4);
+        cursor: pointer;
+        border-radius: 1em;
+        padding: 2em;
+        margin: 2em 1em;
+    }
+    .s-icon{
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        border: 3px solid rgba(68, 65, 223, 0.14);
+        transform: rotate(45deg);
+        margin-bottom: 3em;
+        margin-top: 1em;
+        transition: 0.3s linear;
+    
+    }
+    .s-icon i{
+        line-height: 70px;
+        transform: rotate(-60deg);
+        font-size: 2em;
+    }
+    .s-box:hover .s-icon{
+        background: rgba(68, 65, 223, 0.14);
+        color: #ddd;
+    }
+    .s-title{
+        font-size: 1.2em;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+
+
+
+
 
 /* ==========
    Testimonials
@@ -374,6 +424,10 @@
         justify-content: center;
 
     }
+    .s-box{
+        max-width: 45%;
+    }
+
     .testimonials-container ul li{
         margin: 2em 10em;
     }
@@ -399,7 +453,7 @@
             padding-right: 14em;
         }
         .about,
-        .teams,
+        .s-section,
         .highlights,
         .testimonials,
         .community-links,
@@ -460,6 +514,16 @@
                 padding-right: 0;
             }
         }
+
+
+        .inner-width{
+            max-width: 1300px;
+    
+        }
+        .s-box{
+            max-width: 30.33%;
+        }
+
         .highlights-container ul{
             display: grid;
             grid-template-columns: repeat(3, auto);
@@ -471,6 +535,7 @@
         .highlights-container{
             margin-bottom: -12.9em;
         }
+
         .testimonials-container ul li{
             margin: 2em 7em;
         }
