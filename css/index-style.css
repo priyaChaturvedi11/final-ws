@@ -412,18 +412,6 @@ header nav ul li a {
   .about-img-m {
     display: block;
   }
-  .highlights-container {
-    margin-bottom: -4em;
-  }
-  .highlights-container ul {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (auto)[3];
-        grid-template-columns: repeat(3, auto);
-    grid-gap: .2em;
-    padding-left: 4em;
-    padding-right: 4em;
-  }
   .teams-container ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -530,6 +518,15 @@ header nav ul li a {
   .row-2 p {
     text-align: right;
     padding-right: 0;
+  }
+  .highlights-container ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
+    grid-gap: .2em;
+    padding-left: 4em;
+    padding-right: 4em;
   }
   .highlights-container {
     margin-bottom: -12.9em;

@@ -367,17 +367,6 @@
     .about-img-m{
         display: block;
     }
-    .highlights-container{
-        margin-bottom: -4em;
-    }
-    .highlights-container ul{
-        display: grid;
-        grid-template-columns: repeat(3, auto);
-        grid-gap: .2em;
-        padding-left: 4em;
-        padding-right: 4em;
-    }
-    
     .teams-container ul{
         display: flex;
         flex-wrap: wrap;
@@ -471,6 +460,14 @@
                 padding-right: 0;
             }
         }
+        .highlights-container ul{
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            grid-gap: .2em;
+            padding-left: 4em;
+            padding-right: 4em;
+        }
+        
         .highlights-container{
             margin-bottom: -12.9em;
         }
