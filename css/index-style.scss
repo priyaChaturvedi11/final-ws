@@ -87,10 +87,7 @@
         display: none;
     }
 
-    section{
-        text-align: left;
-    }
-
+    
     .about,
     .highlights,
     .teams,
@@ -387,12 +384,12 @@
         align-items: center;
         justify-content: center;
 
-        li{
-            width: 33.33%;
-        }
     }
     .testimonials-container ul li{
         margin: 2em 10em;
+    }
+    .copyright-section{
+        font-size: 1em;
     }
    }
 

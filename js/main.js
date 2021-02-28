@@ -6,7 +6,7 @@ let header = $(`<div class="nav-container">
     <ul>
       <li><a class="nav-li" href="events.html">Events</a></li>
       <li><a class="nav-li" href="team.html">Executive Body</a></li>
-      <li><a class="nav-li" href="#">Past Workshops</a></li>
+      <li><a class="nav-li" href="emp.html">Past Workshops</a></li>
     </ul>
   </nav>  
 </header>
@@ -30,6 +30,12 @@ let footer = $(`
   </div>  
 </div>
 </section>
+<!-- COPYRIGHT SECTION BEGINS -->
+<section class="copyright-section">
+    <p class="copyright-desc">Designed & Developed By ACM IGDTUW Student Chapter</p>
+</section>
+<!-- COPYRIGHT SECTION ENDS -->
+
 `);
 
 $(function () {

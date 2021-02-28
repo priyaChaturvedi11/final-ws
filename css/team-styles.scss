@@ -1,9 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap");
+
 @font-face {
   font-family: "Flaticon";
   src: url("Flaticon.eot");
-  src: url("Flaticond41dd41d.eot?#iefix") format("embedded-opentype"), url("Flaticon.woff2") format("woff2"), url("Flaticon.woff") format("woff"), url("Flaticon.ttf") format("truetype"), url("Flaticon.svg#Flaticon") format("svg");
+  src: url("Flaticond41dd41d.eot?#iefix") format("embedded-opentype"),
+       url("Flaticon.woff2") format("woff2"),
+       url("Flaticon.woff") format("woff"),
+       url("Flaticon.ttf") format("truetype"),
+       url("Flaticon.svg#Flaticon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -53,7 +58,6 @@ h4 {
 }
 
 .section-team .single-person:hover {
-  background: -webkit-gradient(linear, left top, right top, from(#016cec), to(#00b5f7));
   background: linear-gradient(to right, #016cec, #00b5f7);
 }
 
@@ -103,12 +107,9 @@ h4 {
   color: black;
 }
 
-.col-sm-6 {
-  margin: 0 auto;
-  /* Added */
-  float: none;
-  /* Added */
-  margin-bottom: 10px;
-  /* Added */
+.col-sm-6{
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 10px; /* Added */
 }
-/*# sourceMappingURL=team-styles.css.map */
+
