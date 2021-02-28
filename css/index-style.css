@@ -283,8 +283,8 @@ header nav ul li a {
 
 .s-icon i {
   line-height: 70px;
-  -webkit-transform: rotate(-60deg);
-          transform: rotate(-60deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
   font-size: 2em;
 }
 
