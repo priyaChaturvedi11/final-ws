@@ -202,12 +202,19 @@ header nav ul li a {
 }
 
 .about .row-1 {
-  display: block;
+  display: -ms-grid;
+  display: grid;
   padding-bottom: 5em;
 }
 
+.about .row-1 .right,
+.about .row-2 .left {
+  display: inline-block;
+  width: 200px;
+}
+
 .about .about-img-m {
-  display: none;
+  display: inline-block;
 }
 
 /* ==========
@@ -554,10 +561,14 @@ header nav ul li a {
     display: grid;
     place-content: center;
   }
+  .row-1 .right {
+    margin: 0 auto;
+  }
   .row-1 {
     display: -ms-grid;
     display: grid;
-    grid-column: span 2;
+    -ms-grid-columns: (50%)[2];
+        grid-template-columns: repeat(2, 50%);
     grid-column-gap: 3em;
   }
   .row-1 h1,
@@ -571,13 +582,16 @@ header nav ul li a {
   .row-2 {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (40%)[auto];
-        grid-template-columns: repeat(auto, 40%);
+    -ms-grid-columns: (50%)[2];
+        grid-template-columns: repeat(2, 50%);
   }
   .row-2 h1,
   .row-2 p {
-    text-align: right;
+    text-align: left;
     padding-right: 0;
+  }
+  .row-2 img {
+    width: 400px;
   }
   .inner-width {
     max-width: 1300px;

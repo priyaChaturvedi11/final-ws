@@ -3309,6 +3309,10 @@ ul {
 .cta_part .cta_part_iner .cta_part_text h1 {
     font-size: 42px;
     font-weight: 700;
+    color:  #fff;
+    font-family: 'Kalam', arial;
+    text-shadow: -2px -2px #616161;
+
 }
 @media (max-width: 576px) {
     /* line 25, E:/170 Kanox Agency/170_Kanox_Agency_html/sass/_cta_part.scss */
@@ -7874,31 +7878,6 @@ h6 {
     margin-bottom: 10px;
 }
 
-/* line 1, E:/170 Kanox Agency/170_Kanox_Agency_html/sass/_breadcrumb.scss */
-.breadcrumb_bg {
-    background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url("../img/helloteam.gif");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.breadcrumb_bg1 {
-    background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url("../img/contact.gif");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.breadcrumb_bg2 {
-    background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url("../img/aboutus.gif");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.breadcrumb_bg3 {
-    background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url("../img/gallery2.gif");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 /* line 5, E:/170 Kanox Agency/170_Kanox_Agency_html/sass/_breadcrumb.scss */
 .breadcrumb {
@@ -7914,7 +7893,7 @@ h6 {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: #112e41;
+    background:rgb(68, 65, 223);
     content: "";
     opacity: 0.75;
     z-index: -1;
@@ -7937,6 +7916,8 @@ h6 {
 /* line 32, E:/170 Kanox Agency/170_Kanox_Agency_html/sass/_breadcrumb.scss */
 .breadcrumb .breadcrumb_iner .breadcrumb_iner_item h2 {
     color: #fff;
+    font-family: 'Kalam', serif;
+    text-shadow: -2px -2px #616161;
     font-size: 50px;
     font-weight: 600;
     margin-bottom: 16px;
@@ -8619,4 +8600,8 @@ h6 {
 .row-image {
     padding: 3px;
     width: 300px;
+}
+
+.breadcrumb_bg3{
+    background: rgb(68, 65, 223);
 }

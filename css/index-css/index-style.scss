@@ -194,11 +194,18 @@
             margin-bottom: 0.87rem;
         }
         .row-1{
-            display: block;
+            display: grid;
             padding-bottom: 5em;
         }
+        .row-1 .right,
+        .row-2 .left{
+            display: inline-block;
+            width: 200px;
+        }
         .about-img-m{
-            display: none;
+            //display: none;
+            display: inline-block;
+
         }
 
     }
@@ -493,9 +500,14 @@
             display: grid;
             place-content: center;
         }
+        .row-1 .right{
+            
+                margin: 0 auto;
+            
+        }
         .row-1{
             display: grid;
-            grid-column: span 2;
+            grid-template-columns: repeat(2, 50%);
             grid-column-gap: 3em;
             h1,
             p{
@@ -508,11 +520,14 @@
         }
         .row-2{
             display: grid;
-            grid-template-columns: repeat(auto, 40%);
+            grid-template-columns: repeat(2, 50%);
             h1,
             p{
-                text-align: right;
+                text-align: left;
                 padding-right: 0;
+            }
+            img{
+                width: 400px;
             }
         }
 
