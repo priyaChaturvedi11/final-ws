@@ -18,6 +18,10 @@ h4 {
   padding: 0;
 }
 
+img {
+  width: 100%;
+}
+
 .section-team {
   font-family: "Poppins", sans-serif;
   padding: 80px 0;
@@ -57,24 +61,24 @@ h4 {
   background: linear-gradient(to right, #016cec, #00b5f7);
 }
 
-.section-team .single-person .person-image {
-  position: relative;
-  margin-bottom: 50px;
+.person-image {
+  height: 200px;
+  width: 200px;
   border-radius: 50%;
   border: 4px dashed transparent;
-  /*transition: padding 0.3s;*/
+  background-size: cover;
+  background-position: center;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 50px auto;
 }
 
 .section-team .single-person:hover .person-image {
   /*padding: 12px;*/
   border: 4px dashed #fff;
-}
-
-.section-team .single-person .person-image img {
-  width: 200px;
-  height: 200px;
-  width: 100%;
-  border-radius: 50%;
 }
 
 .section-team .single-person .person-info .full-name {
@@ -110,5 +114,20 @@ h4 {
   /* Added */
   margin-bottom: 10px;
   /* Added */
+}
+
+@media only screen and (max-width: 600px) {
+  .single-person {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+    grid-column-gap: 2em;
+  }
+  .person-image {
+    margin: auto;
+    height: 120px;
+    width: 120px;
+  }
 }
 /*# sourceMappingURL=team-styles.css.map */
