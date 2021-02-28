@@ -17,13 +17,14 @@ h4 {
   margin: 0;
   padding: 0;
 }
-
+.nav-container {
+  background: #4164DF;
+}
 img {
   width: 100%;
 }
 
 .section-team {
-  font-family: "Poppins", sans-serif;
   padding: 80px 0;
 }
 
@@ -57,8 +58,7 @@ img {
 }
 
 .section-team .single-person:hover {
-  background: -webkit-gradient(linear, left top, right top, from(#016cec), to(#00b5f7));
-  background: linear-gradient(to right, #016cec, #00b5f7);
+  background: linear-gradient(to right, #4442DF, #B3B5F4);
 }
 
 .person-image {
@@ -86,12 +86,14 @@ img {
   font-size: 28px;
   font-weight: 700;
   color: rgba(5, 201, 201, 0.89);
+  font-family: 'Kalam', arial;
 }
 
 .section-team .single-person .person-info .speciality {
   text-transform: uppercase;
   font-size: 14px;
   color: #016cec;
+  font-family: 'Flaticon';
 }
 
 .section-team .single-person:hover .full-name,
@@ -104,6 +106,10 @@ img {
 }
 
 .fa-github {
+  color: black;
+}
+
+.fa-user-circle{
   color: black;
 }
 
@@ -121,7 +127,7 @@ img {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (auto)[2];
-        grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, auto);
     grid-column-gap: 2em;
   }
   .person-image {
@@ -130,4 +136,4 @@ img {
     width: 120px;
   }
 }
-/*# sourceMappingURL=team-styles.css.map */
+/*# sourceMappingURL=team-styles.css.
