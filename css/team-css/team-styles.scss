@@ -1,14 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap");
-
 @font-face {
   font-family: "Flaticon";
   src: url("Flaticon.eot");
-  src: url("Flaticond41dd41d.eot?#iefix") format("embedded-opentype"),
-       url("Flaticon.woff2") format("woff2"),
-       url("Flaticon.woff") format("woff"),
-       url("Flaticon.ttf") format("truetype"),
-       url("Flaticon.svg#Flaticon") format("svg");
+  src: url("Flaticond41dd41d.eot?#iefix") format("embedded-opentype"), url("Flaticon.woff2") format("woff2"), url("Flaticon.woff") format("woff"), url("Flaticon.ttf") format("truetype"), url("Flaticon.svg#Flaticon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -22,13 +17,14 @@ h4 {
   margin: 0;
   padding: 0;
 }
-
-img{
+.nav-container {
+  background: #4164DF;
+}
+img {
   width: 100%;
 }
 
 .section-team {
-  font-family: "Poppins", sans-serif;
   padding: 80px 0;
 }
 
@@ -62,23 +58,22 @@ img{
 }
 
 .section-team .single-person:hover {
-  background: linear-gradient(to right, #016cec, #00b5f7);
+  background: linear-gradient(to right, #4442DF, #B3B5F4);
 }
 
-
-.person-image{
+.person-image {
   height: 200px;
   width: 200px;
   border-radius: 50%;
   border: 4px dashed transparent;
   background-size: cover;
   background-position: center;
+  display: -ms-grid;
   display: grid;
   place-content: center;
   border-radius: 50%;
   overflow: hidden;
   margin: 50px auto;
-
 }
 
 .section-team .single-person:hover .person-image {
@@ -86,21 +81,19 @@ img{
   border: 4px dashed #fff;
 }
 
-
-
-
-
 .section-team .single-person .person-info .full-name {
   margin-bottom: 10px;
   font-size: 28px;
   font-weight: 700;
   color: rgba(5, 201, 201, 0.89);
+  font-family: 'Kalam', arial;
 }
 
 .section-team .single-person .person-info .speciality {
   text-transform: uppercase;
   font-size: 14px;
   color: #016cec;
+  font-family: 'Flaticon';
 }
 
 .section-team .single-person:hover .full-name,
@@ -116,22 +109,31 @@ img{
   color: black;
 }
 
-.col-sm-6{
-  margin: 0 auto; /* Added */
-  float: none; /* Added */
-  margin-bottom: 10px; /* Added */
+.fa-user-circle{
+  color: black;
 }
 
-@media only screen and (max-width: 600px){
-  .single-person{
+.col-sm-6 {
+  margin: 0 auto;
+  /* Added */
+  float: none;
+  /* Added */
+  margin-bottom: 10px;
+  /* Added */
+}
+
+@media only screen and (max-width: 600px) {
+  .single-person {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: (auto)[2];
     grid-template-columns: repeat(2, auto);
     grid-column-gap: 2em;
   }
-  .person-image{
+  .person-image {
     margin: auto;
     height: 120px;
     width: 120px;
   }
 }
-
+/*# sourceMappingURL=team-styles.css.
