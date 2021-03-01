@@ -17,9 +17,11 @@ h4 {
   margin: 0;
   padding: 0;
 }
+
 .nav-container {
   background: #4164DF;
 }
+
 img {
   width: 100%;
 }
@@ -58,6 +60,7 @@ img {
 }
 
 .section-team .single-person:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#4442DF), to(#B3B5F4));
   background: linear-gradient(to right, #4442DF, #B3B5F4);
 }
 
@@ -109,7 +112,7 @@ img {
   color: black;
 }
 
-.fa-user-circle{
+.fa-user-circle {
   color: black;
 }
 
@@ -127,7 +130,7 @@ img {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (auto)[2];
-    grid-template-columns: repeat(2, auto);
+        grid-template-columns: repeat(2, auto);
     grid-column-gap: 2em;
   }
   .person-image {
@@ -136,4 +139,4 @@ img {
     width: 120px;
   }
 }
-/*# sourceMappingURL=team-styles.css.
+/*# sourceMappingURL=team-styles.css.map */

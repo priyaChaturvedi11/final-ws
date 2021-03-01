@@ -126,8 +126,8 @@ img {
   .single-person {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (auto)[2];
-    grid-template-columns: repeat(2, auto);
+    // -ms-grid-columns: (auto)[2];
+     grid-template-columns: repeat(2, auto);
     grid-column-gap: 2em;
   }
   .person-image {
@@ -136,4 +136,4 @@ img {
     width: 120px;
   }
 }
-/*# sourceMappingURL=team-styles.css.
+/*# sourceMappingURL=team-styles.css.*/
