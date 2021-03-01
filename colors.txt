@@ -1,9 +1,0 @@
-color code  - name                              - where used
-
-#5dc5fd     - soft blue                         - header navigation toolbar top
-#162b45     - midnight                          - used in Event heading, Ongoing, Past, Upcoming events background, footer
-#00a6ff     - deep sky blue                     - used in scrollbar moving
-#fffff      - white                             -used in background of headings of upcoming, ongoing and past event, and also in js messages.
-#abb2ba     -Mischka                            -used to write Technical Society part in footer
-            -transparent(default link color)    -link down mentioning ACM Igdtuw wed dev.
-#112E41     - Tangaroa                          -Scrollbar background
