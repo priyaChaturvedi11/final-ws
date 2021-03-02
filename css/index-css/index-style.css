@@ -415,6 +415,10 @@ header nav ul li a {
   color: #30241d;
 }
 
+.cl-container h1 {
+  font-size: 2rem;
+}
+
 .links-container {
   padding: 1em;
   text-align: center;

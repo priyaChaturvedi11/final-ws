@@ -61,8 +61,22 @@ header nav ul li a {
 
 @media only screen and (min-width: 1000px) {
   header {
+    padding-left: 9em;
+    padding-right: 9em;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  header {
     padding-left: 14em;
     padding-right: 14em;
+  }
+}
+
+@media only screen and (min-width: 1250px) {
+  header {
+    padding-left: 12em;
+    padding-right: 12em;
   }
 }
 /*# sourceMappingURL=header-style.css.map */
