@@ -520,6 +520,7 @@ header nav ul li a {
     -ms-grid-rows: (auto)[2];
         grid-template-rows: repeat(2, auto);
     place-content: center;
+    font-size: 1em;
   }
   .row-1 img,
   .row-2 img {
