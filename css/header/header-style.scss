@@ -16,8 +16,6 @@
    Header
    ========== */
    .nav-container{
-    background: #4164DF;
-
     a{
         color: #3FE4DB;
         
@@ -54,9 +52,30 @@ header{
     }
 }
 
+@media only screen and (min-width: 800px){
+    header{
+        padding: 2em 8em;
+    }
+}
+
 @media only screen and (min-width: 1000px){
+    header{
+        padding-left: 9em;
+        padding-right: 9em;
+    }
+}
+
+@media only screen and (min-width: 1100px){
     header{
         padding-left: 14em;
         padding-right: 14em;
+    }
+}
+
+
+@media only screen and (min-width: 1250px){
+    header{
+        padding-left: 12em;
+        padding-right: 12em;
     }
 }

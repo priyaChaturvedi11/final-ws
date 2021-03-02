@@ -13,10 +13,6 @@
 /* ==========
    Header
    ========== */
-.nav-container {
-  background: #4164DF;
-}
-
 .nav-container a {
   color: #3FE4DB;
 }
@@ -55,6 +51,12 @@ header nav ul {
 header nav ul li a {
   display: block;
   padding: 0em 1em;
+}
+
+@media only screen and (min-width: 800px) {
+  header {
+    padding: 2em 8em;
+  }
 }
 
 @media only screen and (min-width: 1000px) {

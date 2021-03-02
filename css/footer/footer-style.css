@@ -27,7 +27,7 @@ section {
 
 .title {
   text-align: center;
-  font-family: 'Kalam', serif;
+  font-family: 'Poppins', serif;
   line-height: 1.2;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -36,7 +36,7 @@ section {
 
 .desc {
   font-weight: 500;
-  color: #616161;
+  color: #fff;
   text-align: center;
 }
 
@@ -54,14 +54,12 @@ section {
    Footer
    ========== */
 .footer {
-  background: #4441df;
   text-align: center;
 }
 
 .footer h1 {
   padding-top: 1em;
   line-height: 0.8;
-  text-shadow: -2px -2px #616161;
 }
 
 .footer * {
@@ -124,8 +122,7 @@ Copyright Section
   text-align: center;
   padding: 1em 0em;
   font-size: 0.6rem;
-  background: #4441DF;
-  color: #78dddd;
+  color: #fff;
 }
 
 @media only screen and (min-width: 800px) {
