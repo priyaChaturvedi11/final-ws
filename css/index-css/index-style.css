@@ -243,7 +243,7 @@ header nav ul li a {
   padding: 2em 0;
 }
 
-.about .about-img-m {
+.about-img-m {
   display: none;
 }
 
@@ -553,19 +553,18 @@ header nav ul li a {
   .row-1 img,
   .row-2 img {
     border-radius: 10px;
+    width: 300px;
   }
   .row-1,
   .row-2 {
     margin: 0;
     padding: 0;
   }
-  .row-1 .right img {
-    display: none;
-  }
   .row-2 .left img {
     display: inline-block;
   }
-  .row-2 .left {
+  .row-2 .left,
+  .row-2 .right {
     margin: 0 auto;
     margin-bottom: 2em;
     padding: 0 2em;
@@ -580,38 +579,38 @@ header nav ul li a {
   header {
     padding: 2em 8em;
   }
-  .right img,
   .left img {
     border-radius: 10px;
-  }
-  .row-1 .right img {
-    display: inline-block;
-    width: 200px;
+    width: 250px;
   }
   .row-1 .right {
     margin: 0 auto;
     margin-bottom: 2em;
     padding: 0 2em;
   }
-  .row-1,
+  .row-1 .about-content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
+  }
+  .row-1 .about-content p {
+    text-align: left;
+  }
   .row-2 {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (50%)[2];
-        grid-template-columns: repeat(2, 50%);
-    grid-column-gap: 3em;
+    -ms-grid-columns: 40% 60%;
+        grid-template-columns: 40% 60%;
+    grid-column-gap: 2em;
   }
-  .row-1 h1,
-  .row-1 p,
   .row-2 h1,
   .row-2 p {
     text-align: left;
   }
-  .row-1 h1,
   .row-2 h1 {
     padding-left: .3em;
   }
-  .row-1 p,
   .row-2 p {
     padding-left: 1em;
     padding-right: 1em;
