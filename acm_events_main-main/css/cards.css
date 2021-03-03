@@ -22,7 +22,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 .card {
     padding: 10px;
     cursor: pointer;
@@ -30,7 +29,7 @@
     height: 300px;
     margin: 10px;
     justify-content: center;
-}
+} 
 
 .front,
 .back {
@@ -44,10 +43,13 @@
 
 .front img {
     height: 100%;
+    margin: 0 auto;
 }
 
 .front {
     transform: perspective(600px) rotateY(0deg);
+    margin: 0 auto;
+    text-align: center;
 }
 
 .back {
