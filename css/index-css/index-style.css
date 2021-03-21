@@ -767,29 +767,30 @@ header nav ul li a {
     padding-top: .5em;
   }
   .highlights-container ul li {
-    height: 580px;
+    max-width: 43.33%;
+    height: 500px;
   }
   .highlights-container ul li:last-child {
-    height: 480px;
+    height: 430px;
   }
 }
 
-@media only screen and (min-width: 1250px) {
+@media only screen and (min-width: 1500px) {
   header {
     padding-left: 12em;
     padding-right: 12em;
   }
   .banner,
   section {
-    padding-left: 9em;
-    padding-right: 9em;
+    padding-left: 20em;
+    padding-right: 20em;
   }
   .highlights-container ul li {
     max-width: 30.33%;
-    height: 500px;
+    height: 80vh;
   }
   .highlights-container ul li:last-child {
-    height: 500px;
+    height: 80vh;
   }
 }
 /*# sourceMappingURL=index-style.css.map */
