@@ -1,468 +1,244 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ACM IGDTUW: Events</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <link rel="stylesheet" href="css/header/header-style.css">
-    <link rel="stylesheet" href="css/footer/footer-style.css">
+	<link rel="stylesheet" href="css/footer/footer-style.css">
 
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:500,700&display=swap" rel="stylesheet">
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <link rel="stylesheet" href="acm_events_main-main/css/cards.css">
-    <link rel="stylesheet" href="acm_events_main-main/css/event-style.css">
 
 </head>
 <style>
-    	 ul{
-        list-style-type: none;
-        padding: 0;
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+    body {
         margin: 0;
+        padding: 0;
+        background-color: #04021a;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='432' height='432' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23542009' stroke-width='2.4'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23c73616'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+        font-family: 'Poppins', serif;
+        color: #fff;
+        font-size: .86rem;
     }
+    section .section-title {
+        text-align: center;
+        color: #fff;
+        font-size: 4rem;
+        text-transform: uppercase;
+    }
+    section ul{
+        display: flex;
+        margin-left: 3em;
+        margin-right: 3em;
+        margin-bottom: 0em;
+    }
+    #filter-list{
+        display: inline-block;
+        border:1px solid rgb(51, 51, 59);
+        background: rgba(51, 51, 59, .2);
+        border-radius: 30px;
+        padding: 4px;
+        margin:0 0 60px;                
+    }
+    #filter-list li{
+        display: inline-block;
+        font-size: 16px;
+        color: #888888;
+        margin: 1%;
+        text-transform: uppercase;
+        line-height: 50px;
+        text-align: center;
+        border-radius: 25px;
+        font-weight: 500;
+        padding: 0 20px;
+        min-width: 130px;
+        cursor: pointer;
+        -webkit-transition:all 0.3s ease-in-out;
+        -ms-transition:all 0.3s ease-in-out;
+        -moz-transition:all 0.3s ease-in-out;
+        transition:all 0.3s ease-in-out;
+    }
+    #filter-list li.active,
+    #filter-list li:hover{
+        background-color: rgba(230, 128, 45, 0.56);
+        color: #fff;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+        background-color: rgba(230, 128, 45, 0.56);
+        border-color: rgba(230, 128, 45, 0.56);
+        box-shadow: none;
+        outline: none;
+    }
+
+    section {
+        padding: 2em 5em 2.5em 5em;
+        text-align: center;
+    }
+
+    .boxesContainer{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .cardBox {
+        font-size: 1.2em;
+        margin: 2%;
+        perspective: 800px;
+        transition: all 0.3s ease 0s;
+        width: 300px;
+        height: 350px;
+
+    }
+
+    .cardBox:hover .card {
+        transform: rotateY( 180deg);
+    }
+
+    .cardBox:hover .back {
+        transform: rotateY(180deg);
+    }
+    .cardBox:hover .front {
+        transform: rotateY(0deg);
+    }
+
+
+    .card {
+        background: rgba(51, 51, 59, 0.4);
+        cursor: default;
+        height: 350px;
+        border-radius: 10px;
+        transform-style: preserve-3d;
+        transition: transform 0.4s ease 0s;
     
-    a{
-        text-decoration: none;
     }
-	.nav-container header{
-		display: flex;
-        justify-content: space-between;
-	}
-	
-	nav ul{
-		display: flex;
-	}
 
-	header nav ul li a{
-		display: block;
-		padding: 0px 13.76px;
-	}
-	@media only screen and (max-width: 800px){
-		.nav-container header{
-			padding: 27.52px;
-			font-size: 13.76px;
-		}
-	}	
+    .card p {
+        margin-bottom: 1.8em;
+    }
+
+    .card .front,
+    .card .back {
+        backface-visibility: hidden;
+        box-sizing: border-box;
+        color: white;
+        display: block;
+        font-size: 1.2em;
+        height: 100%;
+        padding: 0.8em;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        transition: transform .6s linear;
+    }
+
+    .card .back {
+        transform: rotateY( 180deg);
+    }
+
+    .card .back a {
+        padding: 0.3em 0.5em;
+        background: rgba(51, 51, 59, 0.8);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 10px;
+        font-size: 0.9em;
+        transition: all 0.2s ease 0s;
+    }
+
+    .card .back a:hover {
+        background: rgba(230, 128, 45, 0.56);
+        color: #fff;
+        text-shadow: 0 0 1px #333;
+    }
+
+
+
+
+    @-webkit-keyframes giro {
+        from {
+            transform: rotateY( 180deg);
+        }
+        to {
+            transform: rotateY( 0deg);
+        }
+    }
+
+    @keyframes giro {
+        from {
+            transform: rotateY( 180deg);
+        }
+        to {
+            transform: rotateY( 0deg);
+        }
+    }
+
+    @media screen and (min-width: 1000px) {
+        .cardBox {
+            max-width: 700px;
+        }
+    }
+
 </style>
-
-
 <body>
+    <section>
+        <div class="container">
+            <h1 class="section-title">EVENTS</h1>
+            <div class="row">
+                <div>
+                    <ul id="filter-list">
+                        <li class="filter active" data-filter="0">All</li>
+                        <li class="filter" data-filter="1">Open Source</li>
+                        <li class="filter" data-filter="2">Cyber security</li>
+                        <li class="filter" data-filter="3">Web Development</li>
+                        <li class="filter" data-filter="4">Competetive</li>
+                        <li class="filter" data-filter="5">Fun Events</li>
+                        <li class="filter" data-filter="6">SIH</li>
+                        <li class="filter" data-filter="7">Hackathon</li>
+                        <li class="filter" data-filter="8">DS and ML</li>
+                        <li class="filter" data-filter="9">Advaya</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <section>
-        <div id="events">
-            <div class="heading white" style="font-size: 3rem; color: white">
-               EVENTS
+        <div class="container">
+            <div class="boxesContainer">
+
+                <!---Item 1-->
+                <div class="cardBox">
+                    <div class="card">
+                    <div class="front">
+                        <img src="img/past-workshops/hacktober.png" alt="Hacktober Series" class="image-fluid">
+                    </div>
+                    <div class="back">
+                        <h3 class="card-title">Open Source Series</h3>
+                        <p class="card-text">Getting information about Hackoctober and Beyound the Hackoctober series</p>
+                        <a href="acm_events_main-main/10_Open Source Series.html">Read More</a>
+                    </div>
+                    </div>
+                </div>
+
+                <!---Item 2-->
+
             </div>
+            <!--.boxesContainer-->
+
         </div>
-        <div class="heading blue">
-            Upcoming Events
-        </div>
-        <div id="upcoming-events" class="light-blue">
-            <div class="heading" style="text-shadow: -2.5px -2.5px #656565;color: white">
-                <marquee>Come back here soon!</marquee>
-            </div>
-        </div>
-        <div class="heading blue">
-            Past Events
-        </div>
-    
-        <div id="past-events" class="light-blue flexbox">
-            <!--row 1-->
-            <div class="row">
-                <div class="card">
-                    <div class="card middle">
-                        <div class="front" style="background-image: url('acm_events_main-main/images/virtualhunt.jpg'); background-repeat: no-repeat; background-position: left; background-size: contain;">
-                        </div>
-                        <div class="back">
-                            <div class="back-content middle">
-                                <h2>Virtual Scavenger Hunt</h2>
-                                <div class="sm">
-                                    <span><a href="acm_events_main-main/1_Virtual_Hunt.html">Read More</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card middle">
-                        <div class="front" style ="background-image: url('acm_events_main-main/images/introwd.jpeg'); background-repeat: no-repeat; background-position: left; background-size: contain;">
-                        </div>
-                        <div class="back">
-                            <div class="back-content middle">
-                                <h2>An Intro to Web Development</h2>
-                                <div class="sm">
-                                <span><a href="acm_events_main-main/2_Intro to Web Development.html">Read More</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card middle">
-                        <div class="front" style="background-image: url('acm_events_main-main/images/acingsih.jpeg'); background-repeat: no-repeat; background-position: left; background-size: contain;">
-                        </div>
-                        <div class="back">
-                            <div class="back-content middle">
-                                <h2>Acing the Smart India Hackathon</h2>
-        
-                                <div class="sm">
-                                    <span><a href="acm_events_main-main/3_Acing the Smart India Hackathon.html">Read More</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card middle">
-                        <div class="front" style="background-image: url('acm_events_main-main/images/introdl.jpeg'); background-repeat: no-repeat; background-position: left; background-size: contain;">
-                        </div>
-                        <div class="back">
-                            <div class="back-content middle">
-                                <h2>An Intro to Deep Learning</h2>
-                                <div class="sm">
-                                <span><a href="acm_events_main-main/4_An Intro to Deep Learning.html">Read More</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <div class="card middle">
-                        <div class="front" style="background-image: url('acm_events_main-main/images/introtomlalgo.jpeg'); background-repeat: no-repeat; background-position: left; background-size: contain;">
-                        </div>
-                        <div class="back">
-                            <div class="back-content middle">
-                                <h2>An Intro to Machine Learning Algorithms</h2>
-                                <div class="sm">
-                                <span><a href="acm_events_main-main/5_An Intro to Machine Learning Algorithms.html">Read More</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card middle">
-                        <div class="front" style="background-image: url('acm_events_main-main/images/introstl.jpeg'); background-repeat: no-repeat; background-position: left; background-size: contain;">
-                        </div>
-                        <div class="back">
-                            <div class="back-content middle">
-                                <h2>An Intro to STL in C++</h2>
-                                <div class="sm">
-                                    <span><a href ="6_An Intro to STL in C++.html">Read More</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card middle">
-                        <div class="front" style="background-image: url('acm_events_main-main/images/cybersec.jpeg'); background-repeat: no-repeat; background-position: left; background-size: contain;">
-                        </div>
-                        <div class="back">
-                            <div class="back-content middle">
-                                <h2>Learn Cybersecurity</h2>
-                                <div class="sm">
-                                <span><a href="acm_events_main-main/7_Learn Cybersecurity.html">Read More</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card middle">
-                        <div class="front" style="background-image: url('acm_events_main-main/images/beyondhack.jpeg'); background-repeat: no-repeat; background-position: left; background-size: contain;">
-                        </div>
-                        <div class="back">
-                            <div class="back-content middle">
-                                <h2>Beyond Hacktoberfest</h2>
-                                <div class="sm">
-                                    <span><a href="acm_events_main-main/8_Beyond Hacktoberfest.html">Read More</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card middle">
-                        <div class="front"style="background-image: url('acm_events_main-main/images/hack2020.jpeg'); background-repeat: no-repeat; background-position: left; background-size: contain;">
-                        </div>
-                        <div class="back">
-                            <div class="back-content middle">
-                                <h2>Hacktoberfest 2020</h2>
-                                <div class="sm">
-                                <span><a href="acm_events_main-main/9_Hacktoberfest 2020.html">Read More</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card middle">
-                        <div class="front"style="background-image: url('acm_events_main-main/images/openseries.jpg'); background-repeat: no-repeat; background-position: left; background-size: contain;">
-                        </div>
-                        <div class="back">
-                            <div class="back-content middle">
-                                <h2>Open Source Series</h2>
-                                <div class="sm">
-                                <span><a href="acm_events_main-main/10_Open Source Series.html">Read More</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card middle">
-                        <div class="front"style="background-image: url('acm_events_main-main/images/freeml.jpg'); background-repeat: no-repeat; background-position: left; background-size: contain;">
-                        </div>
-                        <div class="back">
-                            <div class="back-content middle">
-                                <h2>Free Webinar on Machine Learning Using Python</h2>
-                                <div class="sm">
-                                    <span><a href="acm_events_main-main/11_Free Webinar on Machine Learning Using Python.html">Read More</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card middle">
-                        <div class="front"style="background-image: url('acm_events_main-main/images/keynotekkbiswas.jpeg'); background-repeat: no-repeat; background-position: left; background-size: contain;">
-                        </div>
-                        <div class="back">
-                            <div class="back-content middle">
-                                <h2>ACM Summer Workshop on DS and ML - Keynote Talk by Prof. K K Biswas</h2>
-                                <div class="sm">
-                                    <span><a href="acm_events_main-main/12_ACM Summer Workshop on DS and ML - Keynote Talk by Prof. K K Biswas.html">Read More</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card middle">
-                        <div class="front"style="background-image: url('acm_events_main-main/images/explectsudarshaniyengar.jpeg'); background-repeat: no-repeat; background-position: left; background-size: contain;">
-                        </div>
-                        <div class="back">
-                            <div class="back-content middle">
-                                <h2>ACM Summer Workshop on DS and ML - Expert Lecture by Dr. Sudharshan Iyengar</h2>
-                                <div class="sm">
-                                    <span><a href="acm_events_main-main/13_ACM Summer Workshop on DS and ML - Expert Lecture by Dr. Sudharshan Iyengar.html">Read More</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card middle">
-                        <div class="front"style="background-image: url('acm_events_main-main/images/14.jpeg'); background-repeat: no-repeat; background-position: left; background-size: contain;">
-                        </div>
-                        <div class="back">
-                            <div class="back-content middle">
-                                <h2>ACM Summer Workshop on DS and ML - Expert Lecture by Mr. Rakesh Dubbudu.html</h2>
-                                <div class="sm">
-                                    <span><a href="acm_events_main-main/14_ACM Summer Workshop on DS and ML - Expert Lecture by Mr. Rakesh Dubbudu.html">Read More</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card middle">
-                        <div class="front"style="background-image: url('acm_events_main-main/images/15.jpeg'); background-repeat: no-repeat; background-position: left; background-size: contain;">
-                        </div>
-                        <div class="back">
-                            <div class="back-content middle">
-                                <h2>ACM Summer Workshop on DS and ML - Expert Lecture by Dr. Ruchika Malhotra</h2>
-                                <div class="sm">
-                                    <span><a href="acm_events_main-main/15_ACM Summer Workshop on DS and ML - Expert Lecture by Dr. Ruchika Malhotra.html">Read More</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card middle">
-                        <div class="front"style="background-image: url('acm_events_main-main/images/PE-4 July-1.jpeg'); background-repeat: no-repeat; background-position: left; background-size: contain;"></div>
-                        <div class="front">
-                        </div>
-                        <div class="back">
-                            <div class="back-content middle">
-                                <h2>ACM Summer Workshop on DS and ML - Keynote Talk by Prof. Girish Nath Jha</h2>
-                                <div class="sm">
-                                <span><a href="acm_events_main-main/16_ACM Summer Workshop on DS and ML - Keynote Talk by Prof. Girish Nath Jha.html">Read More</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card middle">
-                        <div class="front"style="background-image: url('acm_events_main-main/images/PE-3 July.jpeg'); background-repeat: no-repeat; background-position: left; background-size: contain;"></div>
-                        <div class="front">
-                        </div>
-                        <div class="back">
-                            <div class="back-content middle">
-                                <h2>ACM summer workshop on DS and ML -Expert lecture by Dr. Ashish Khanna</h2>
-                                <div class="sm">
-                                    <span><a href="acm_events_main-main/17_ACM summer workshop on DS and ML -Expert lecture by Dr. Ashish Khanna.html">Read More</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card middle">
-                        <div class="front"style="background-image: url('acm_events_main-main/images/PE-1 July.jpeg'); background-repeat: no-repeat; background-position: left; background-size: contain;"></div>
-                        <div class="front">
-                        </div>
-                        <div class="back">
-                            <div class="back-content middle">
-                                <h2>ACM summer workshop on DS and ML -Expert lecture by Dr Chandra Prakash</h2>
-                                <div class="sm">
-                                    <span><a href="acm_events_main-main/18_ACM summer workshop on DS and ML -Expert lecture by Dr Chandra Prakash.html">Read More</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card middle">
-                        <div class="front">
-                            <div class="front"style="background-image: url('acm_events_main-main/images/PE-22 June-1.jpeg'); background-repeat: no-repeat; background-position: left; background-size: contain;"></div>
-                        </div>
-                        <div class="back">
-                            <div class="back-content middle">
-                                <h2>ACM summer workshop on DS and ML -Keynote Address by Prof. Ponnurangam Kumaraguru</h2>
-                                <div class="sm">
-                                    <span><a href="acm_events_main-main/19_ACM summer workshop on DS and ML -Keynote Address by Prof. Ponnurangam Kumaraguru.html">Read More</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card middle">
-                        <div class="front">
-                            <div class="front"style="background-image: url('acm_events_main-main/images/PE-22 June.jpeg'); background-repeat: no-repeat; background-position: left; background-size: contain;"></div>
-                        </div>
-                        <div class="back">
-                            <div class="back-content middle">
-                                <h2>ACM summer workshop on DS and ML - Expert lecture by Dr Niyati Baliyan</h2>
-                                <div class="sm">
-                                <span><a href="acm_events_main-main/20_ACM summer workshop on DS and ML - Expert lecture by Dr Niyati Baliyan.html">Read More</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card middle">
-                        <div class="front">
-                            <div class="front"style="background-image: url('acm_events_main-main/images/PE-19 June.jpeg'); background-repeat: no-repeat; background-position: left; background-size: contain;"></div>
-                        </div>
-                        <div class="back">
-                            <div class="back-content middle">
-                                <h2>ACM Summer Workshop on DS and ML - Keynote Address by Prof. Deepak Garg</h2>
-                                <div class="sm">
-                                    <span><a href="acm_events_main-main/21_ACM Summer Workshop on DS and ML - Keynote Address by Prof. Deepak Garg.html">Read More</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card middle">
-                        <div class="front">
-                            <div class="front"style="background-image: url('acm_events_main-main/images/PE-15 April.jpeg'); background-repeat: no-repeat; background-position: left; background-size: contain;"></div>
-                        </div>
-                        <div class="back">
-                            <div class="back-content middle">
-                                <h2>Advaya 2020-Learn the art of coding - keynote speakers were Ms Divya Chakarwarti and Ms Shefali Jindal</h2>
-                                <div class="sm">
-                                    <span><a href="acm_events_main-main/22_Advaya 2020-Learn the art of coding - keynote speakers were Ms Divya Chakarwarti and Ms Shefali Jindal.html">Read More</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card middle">
-                        <div class="front">
-                            <div class="front"style="background-image: url('acm_events_main-main/images/PE-14 April.jpeg'); background-repeat: no-repeat; background-position: left; background-size: contain;"></div>
-                        </div>
-                        <div class="back">
-                            <div class="back-content middle">
-                                <h2>Advaya 2020-Ready.Set.Research - session by Dr Rishabh Kaushal</h2>
-                                <div class="sm">
-                                <span><a href="acm_events_main-main/23_Advaya 2020-Ready.Set.Research - session by Dr Rishabh Kaushal.html">Read More</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card middle">
-                        <div class="front">
-                            <div class="front"style="background-image: url('acm_events_main-main/images/PE-Advaya 20.jpeg'); background-repeat: no-repeat; background-position: left; background-size: contain;"></div>
-                        </div>
-                        <div class="back">
-                            <div class="back-content middle">
-                                <h2>All about Advaya</h2>
-                                <div class="sm">
-                                <span><a href="acm_events_main-main/24_All about Advaya.html">Read More</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-           
-
-                <div class="card">
-                    <div class="card middle">
-                        <div class="front">
-                            <div class="front"style="background-image: url('acm_events_main-main/images/PE-22 Feb.jpeg'); background-repeat: no-repeat; background-position: left; background-size: contain;"></div>
-                        </div>
-                        <div class="back">
-                            <div class="back-content middle">
-                                <h2>InfoSecGirls Meet-Delhi Chapter</h2>
-                                <div class="sm">
-                                    <span><a href="acm_events_main-main/25_InfoSecGirls Meet-Delhi Chapter.html">Read More</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card middle">
-                        <div class="front">
-                            <div class="front"style="background-image: url('acm_events_main-main/images/PE-19 Feb.jpeg'); background-repeat: no-repeat; background-position: left; background-size: contain;"></div>
-                        </div>
-                        <div class="back">
-                            <div class="back-content middle">
-                                <h2>Complete bootcamp for competitive coding landscape</h2>
-                                <div class="sm">
-                                    <span><a href="acm_events_main-main/26_Complete bootcamp for competitive coding landscape.html">Read More</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    
-
     </section>
-		<!-- Dynamic footer section -->
-<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-<!-- Dynamic footer section -->
-<script src="js/main.js"></script>
+
+    <script src="js/main.js"></script>>
 
 
 </body>
