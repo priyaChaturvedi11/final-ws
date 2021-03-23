@@ -5,14 +5,30 @@
     <title>ACM IGDTUW: Events</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
     <link rel="stylesheet" href="css/header/header-style.css">
 	<link rel="stylesheet" href="css/footer/footer-style.css">
+        <!-- jQuery -->
+        <!-- <script src="js/events-js/jquery-3.3.1.min.js"></script>  -->
+    <script src="https://code.jquery.com/jquery-3.4.0.js"></script>
+    <script>
+            $(document).ready(function(){
+                $(".button").click(function(){
+                    var name = $(this).attr("data-filter");
+                    if(name == "all"){
+                        $(".filter").show("2000");
+                
+                    }else{
+                        $(".filter").not("." + name).hide("1000");
+                        $(".filter").filter("." + name).show("5000");
+                    }
+                });
+                $(".navigation ").click(function(){
+                    $(this).addClass("active").siblings().removeClass("active");
+            });
 
-
+            });
+        </script>   
+    
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
@@ -26,31 +42,34 @@
         color: #fff;
         font-size: .86rem;
     }
+    a{
+        
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
     section .section-title {
         text-align: center;
         color: #fff;
         font-size: 4rem;
         text-transform: uppercase;
     }
-    section ul{
-        display: flex;
-        margin-left: 3em;
-        margin-right: 3em;
-        margin-bottom: 0em;
-    }
-    #filter-list{
+    .navigation{
+        /* padding: 15px 0px; */
         display: inline-block;
-        border:1px solid rgb(51, 51, 59);
+	    border:1px solid rgb(51, 51, 59);
         background: rgba(51, 51, 59, .2);
-        border-radius: 30px;
-        padding: 4px;
-        margin:0 0 60px;                
+	    border-radius: 30px;
+	    padding: 4px;
+    	margin:0 0 60px 0;
     }
-    #filter-list li{
+    .navigation a{
+        text-decoration: none;
         display: inline-block;
         font-size: 16px;
         color: #888888;
-        margin: 1%;
         text-transform: uppercase;
         line-height: 50px;
         text-align: center;
@@ -63,86 +82,75 @@
         -ms-transition:all 0.3s ease-in-out;
         -moz-transition:all 0.3s ease-in-out;
         transition:all 0.3s ease-in-out;
-    }
-    #filter-list li.active,
-    #filter-list li:hover{
-        background-color: rgba(230, 128, 45, 0.56);
-        color: #fff;
+
     }
 
-    .btn-primary:hover,
-    .btn-primary:focus {
+    .navigation a:active,
+    .navigation a:hover{
         background-color: rgba(230, 128, 45, 0.56);
-        border-color: rgba(230, 128, 45, 0.56);
-        box-shadow: none;
-        outline: none;
-    }
-
-    section {
-        padding: 2em 5em 2.5em 5em;
-        text-align: center;
+	    color: #fff;
     }
 
     .boxesContainer{
+        margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
     }
+
     .cardBox {
-        font-size: 1.2em;
-        margin: 2%;
-        perspective: 800px;
-        transition: all 0.3s ease 0s;
-        width: 300px;
-        height: 350px;
-
+        display: inline-block;
+        margin: 2em 1em;
+        padding: .7em;
+        /* transition: all 0.3s ease 0s; */
     }
 
-    .cardBox:hover .card {
-        transform: rotateY( 180deg);
+    .card{
+        position: relative;
     }
 
-    .cardBox:hover .back {
-        transform: rotateY(180deg);
+    .front,
+    .back{
+        width: 250px;
+        height: 250px;
     }
-    .cardBox:hover .front {
-        transform: rotateY(0deg);
-    }
-
-
-    .card {
-        background: rgba(51, 51, 59, 0.4);
-        cursor: default;
-        height: 350px;
-        border-radius: 10px;
-        transform-style: preserve-3d;
-        transition: transform 0.4s ease 0s;
-    
-    }
-
-    .card p {
-        margin-bottom: 1.8em;
-    }
-
-    .card .front,
-    .card .back {
+    .front img{
+        margin: .5em;
+        width: 245px;
+        height: 230px;
+        opacity: 1;
         backface-visibility: hidden;
-        box-sizing: border-box;
-        color: white;
-        display: block;
-        font-size: 1.2em;
-        height: 100%;
-        padding: 0.8em;
-        position: absolute;
-        text-align: center;
-        width: 100%;
-        transition: transform .6s linear;
     }
 
-    .card .back {
-        transform: rotateY( 180deg);
+    .back{
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
     }
+
+    .card:hover .front {
+         opacity: 0;
+    }
+
+    .card:hover .back {
+      opacity: 1;
+    }
+
+    .back-text {
+        background: rgba(51, 51, 59, 0.4);
+        color: white;
+        font-size: .86rem;
+        width: 245px;
+        height: 230px;
+        padding: 1em;
+    }
+
 
     .card .back a {
         padding: 0.3em 0.5em;
@@ -152,6 +160,7 @@
         border-radius: 10px;
         font-size: 0.9em;
         transition: all 0.2s ease 0s;
+
     }
 
     .card .back a:hover {
@@ -161,51 +170,23 @@
     }
 
 
-
-
-    @-webkit-keyframes giro {
-        from {
-            transform: rotateY( 180deg);
-        }
-        to {
-            transform: rotateY( 0deg);
-        }
-    }
-
-    @keyframes giro {
-        from {
-            transform: rotateY( 180deg);
-        }
-        to {
-            transform: rotateY( 0deg);
-        }
-    }
-
-    @media screen and (min-width: 1000px) {
-        .cardBox {
-            max-width: 700px;
-        }
-    }
-
 </style>
 <body>
     <section>
         <div class="container">
             <h1 class="section-title">EVENTS</h1>
-            <div class="row">
-                <div>
-                    <ul id="filter-list">
-                        <li class="filter active" data-filter="0">All</li>
-                        <li class="filter" data-filter="1">Open Source</li>
-                        <li class="filter" data-filter="2">Cyber security</li>
-                        <li class="filter" data-filter="3">Web Development</li>
-                        <li class="filter" data-filter="4">Competetive</li>
-                        <li class="filter" data-filter="5">Fun Events</li>
-                        <li class="filter" data-filter="6">SIH</li>
-                        <li class="filter" data-filter="7">Hackathon</li>
-                        <li class="filter" data-filter="8">DS and ML</li>
-                        <li class="filter" data-filter="9">Advaya</li>
-                    </ul>
+            <div class="row" style="text-align: center;">
+                <div class="navigation">
+                        <a href="#" class="button active" data-filter="all">All</a>
+                        <a href="#" class="button" data-filter="1">Open Source</a>
+                        <a href="#" class="button" data-filter="2">Cyber security</a>
+                        <a href="#" class="button" data-filter="3">Web Development</a>
+                        <a href="#" class="button" data-filter="4">Competetive</a>
+                        <a href="#" class="button" data-filter="5">Fun Events</a>
+                        <a href="#" class="button" data-filter="6">SIH</a>
+                        <a href="#" class="button" data-filter="7">Hackathon</a>
+                        <a href="#" class="button" data-filter="8">DS and ML</a>
+                        <a href="#" class="button" data-filter="9">Advaya</a>
                 </div>
             </div>
 
@@ -216,30 +197,112 @@
         <div class="container">
             <div class="boxesContainer">
 
-                <!---Item 1-->
-                <div class="cardBox">
-                    <div class="card">
-                    <div class="front">
-                        <img src="img/past-workshops/hacktober.png" alt="Hacktober Series" class="image-fluid">
-                    </div>
-                    <div class="back">
-                        <h3 class="card-title">Open Source Series</h3>
-                        <p class="card-text">Getting information about Hackoctober and Beyound the Hackoctober series</p>
-                        <a href="acm_events_main-main/10_Open Source Series.html">Read More</a>
-                    </div>
-                    </div>
-                </div>
+   
 
-                <!---Item 2-->
+                    <!---Item 1-->
+                   
+                        <div class="cardBox filter 1">
+                            <div class="card">
+                                <div class="front">
+                                    <img src="img/past-workshops/hacktober.png" alt="Hacktober Series" class="image-fluid">
+                                </div>
+                                <div class="back">
+                                    <div class="back-text">
+                                        <h3 class="card-title">Open Source Series</h3>
+                                        <p class="card-text">Getting information about Hackoctober and Beyound the Hackoctober series</p>
+                                        <a href="acm_events_main-main/10_Open Source Series.html">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                   
+                    <!---Item 2-->
+                        <div class="cardBox filter 2">
+                            <div class="card">
+                                <div class="front">
+                                    <img src="img/past-workshops/hacktober.png" alt="Hacktober Series" class="image-fluid">
+                                </div>
+                                <div class="back">
+                                    <div class="back-text">
+                                        <h3 class="card-title">Open Source Series</h3>
+                                        <p class="card-text">Getting information about Hackoctober and Beyound the Hackoctober series</p>
+                                        <a href="acm_events_main-main/10_Open Source Series.html">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                   
+                    <!---Item 3-->
+                        <div class="cardBox filter 3">
+                            <div class="card">
+                                <div class="front">
+                                    <img src="img/past-workshops/hacktober.png" alt="Hacktober Series" class="image-fluid">
+                                </div>
+                                <div class="back">
+                                    <div class="back-text">
+                                        <h3 class="card-title">Open Source Series</h3>
+                                        <p class="card-text">Getting information about Hackoctober and Beyound the Hackoctober series</p>
+                                        <a href="acm_events_main-main/10_Open Source Series.html">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
+                    <!---Item 4-->
+                        <div class="cardBox filter 1 2">
+                            <div class="card">
+                                <div class="front">
+                                    <img src="img/past-workshops/hacktober.png" alt="Hacktober Series" class="image-fluid">
+                                </div>
+                                <!-- <div class="back">
+                                    <h3 class="card-title">Open Source Series</h3>
+                                    <p class="card-text">Getting information about Hackoctober and Beyond the Hackoctober series</p>
+                                    <a href="acm_events_main-main/10_Open Source Series.html">Read More</a>
+                                </div> -->
+                            </div>
+                        </div>
+
+                    <!---Item 5-->
+                        <div class="cardBox filter 3">
+                            <div class="card">
+                                <div class="front">
+                                    <img src="img/past-workshops/hacktober.png" alt="Hacktober Series" class="image-fluid">
+                                </div>
+                                <div class="back">
+                                    <div class="back-text">
+                                        <h3 class="card-title">Open Source Series</h3>
+                                        <p class="card-text">Getting information about Hackoctober and Beyound the Hackoctober series</p>
+                                        <a href="acm_events_main-main/10_Open Source Series.html">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    <!---Item 6-->
+                        <div class="cardBox filter one">
+                            <div class="card">
+                                <div class="front">
+                                    <img src="img/past-workshops/hacktober.png" alt="Hacktober Series" class="image-fluid">
+                                </div>
+                                <div class="back">
+                                    <div class="back-text">
+                                        <h3 class="card-title">Open Source Series</h3>
+                                        <p class="card-text">Getting information about Hackoctober and Beyound the Hackoctober series</p>
+                                        <a href="acm_events_main-main/10_Open Source Series.html">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+            
+       
             </div>
             <!--.boxesContainer-->
 
         </div>
     </section>
 
-    <script src="js/main.js"></script>>
-
+    <script src="js/main.js"></script>
 
 </body>
 
