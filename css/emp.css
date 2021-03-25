@@ -153,7 +153,7 @@ section .section-title {
 .frontside .card,
 .backside .card {
     height: 400px;
-    width: 350px;
+    min-width: 300px;
 }
 
 .backside .card a {
@@ -179,23 +179,3 @@ section .section-title {
 	 padding-top:25px;
     padding-bottom:25px;
 }
-.itemBox{
-margin-right:15%;
-}
-.row{
-margin-right:3%;
-margin-left:2%;
-}
-@media (min-width: 1100px) and (max-width:1200px) {
-.itemBox{
-margin-right:30%;
-margin-left:20%;
-}
-    }
-    
-@media (max-width:1100px) {
-.itemBox{
-margin-right:30%;
-margin-left:20%;
-}
-    }
