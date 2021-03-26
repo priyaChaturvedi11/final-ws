@@ -427,7 +427,7 @@ header nav ul li a {
 .subteam-container {
   background: rgba(51, 51, 59, 0.4);
   border-radius: 13px;
-  height: 200px;
+  height: 350px;
   padding: 2em;
 }
 
@@ -458,7 +458,7 @@ header nav ul li a {
 .cl-container {
   background: rgba(51, 51, 59, 0.4);
   border-radius: 13px;
-  height: 200px;
+  height: 374px;
   padding: 2em;
 }
 
@@ -566,15 +566,30 @@ header nav ul li a {
   color: #fff;
 }
 
+@media only screen and (min-width: 350px) {
+  .subteam-container,
+  .cl-container {
+    height: 320px;
+  }
+}
+
 @media only screen and (min-width: 500px) {
   .about-acm-igdtuw {
     padding-top: 2em;
+  }
+  .subteam-container,
+  .cl-container {
+    height: 300px;
   }
 }
 
 @media only screen and (min-width: 600px) {
   header {
     font-size: 1.156rem;
+  }
+  .subteam-container,
+  .cl-container {
+    height: 280px;
   }
 }
 
