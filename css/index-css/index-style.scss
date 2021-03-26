@@ -248,6 +248,8 @@
    .row-1,
    .row-2{
            padding: 2em 1em;
+           background:  rgba(51, 51, 59, 0.4);
+           border-radius: 10px;
            p{
                padding-top: .58em;
            }
@@ -255,12 +257,7 @@
    }
     .row-1 .left:hover,
     .row-2 .right:hover{
-            border-radius: 10px;
             background: rgba(230, 128, 45, 0.56);
-            padding: 2em 1em;
-            p{
-                padding-top: 1em;
-            }
 
     }
 
@@ -442,13 +439,10 @@
    Community Links
    ========== */
    .cl-container{
-    background: rgba(230, 128, 45, 0.56);
+    background: rgba(51, 51, 59, 0.4);
     border-radius: 13px;
     height: 200px;
     padding: 2em;
-    a{
-        color: #30241d;
-    }
     h1{
         font-size: 2rem;
     }
@@ -461,11 +455,16 @@
         display: flex;
         flex-direction: column;
         a{
-            color: #0e0202;
+            color: #fff;
+            font-weight: normal;
         }
+    }
+    .cl-container:hover,
+    .cl-container:active{
+        background: rgba(230, 128, 45, 0.56);
+     
         a:hover,
-        a:focus{
-            color:#fff;
+        a:active{
             font-weight: 600;
         }
     }
@@ -583,14 +582,8 @@
                 display: block;
             }           
         }
-        .row-2 .right:hover{
-            border-radius: 10px;
+        .row-2:hover .row-2{
             background: rgba(230, 128, 45, 0.56);
-            padding: 1em .5em;
-            p{
-                padding-top: .5em;
-            }
-
         }
    }
    @media only screen and (min-width: 1000px){
@@ -689,7 +682,6 @@
         }    
 
         .cl-container{
-            background: rgba(230, 128, 45, 0.56);
             border-radius: 13px;
             height: 200px;
             padding: 2em;
@@ -716,13 +708,6 @@
             img{
                 width: 400px;
             }           
-        }
-        .row-2 > .right:hover{
-            padding: 1em .5em;
-            p{
-                padding-top: .5em;
-            }
-
         }
         .highlights-container ul li{
             max-width: 43.33%;
