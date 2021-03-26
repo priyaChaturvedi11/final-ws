@@ -149,33 +149,6 @@ section,
   color: #616161;
 }
 
-/* =========
-    Scroll To 
-    ======== */
-/*scrol to top*/
-.scrollToTop {
-  background: url("../../img/bootom-top-arrow.png") no-repeat scroll 13px 12px rgba(51, 51, 59, 0.4);
-  border: 3px solid #f0f1f3;
-  border-radius: 5px;
-  bottom: 20px;
-  display: inline-block;
-  height: 54px;
-  opacity: 0;
-  position: fixed;
-  right: 20px;
-  text-align: center;
-  width: 54px;
-  z-index: 100;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.scrollToTop:hover {
-  background-position: 13px -50px;
-  text-decoration: none;
-  outline: none;
-}
-
 /* ==========
    Header
    ========== */
@@ -240,8 +213,8 @@ header nav ul li a {
    ========== */
 .row-1,
 .row-2 {
-  padding: 2em 1em;
   background: rgba(51, 51, 59, 0.4);
+  padding: 2em 1em;
   border-radius: 10px;
 }
 
@@ -250,8 +223,13 @@ header nav ul li a {
   padding-top: .58em;
 }
 
-.row-1 .left:hover,
-.row-2 .right:hover {
+.about-acm:hover .row-1,
+.about-acm:active .row-1 {
+  background: rgba(230, 128, 45, 0.56);
+}
+
+.about-acm-igdtuw:hover .row-2,
+.about-acm-igdtuw:active .row-2 {
   background: rgba(230, 128, 45, 0.56);
 }
 
@@ -271,12 +249,6 @@ header nav ul li a {
 }
 
 .highlights-container ul li:hover {
-  /*
-        color: white;
-        background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
-        background-blend-mode: multiply;
-//        background-image: linear-gradient(45deg, #874da2 0%, #c43a30 100%);
-        */
   background: rgba(230, 128, 45, 0.56);
   -webkit-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
@@ -297,7 +269,7 @@ header nav ul li a {
 .highlight-item-title h1 {
   line-height: 1.2em;
   padding-bottom: 2em;
-  font-size: 7em;
+  font-size: 18px;
 }
 
 /* ==========
@@ -389,20 +361,24 @@ header nav ul li a {
   transition: 0.2s ease-out;
 }
 
-.testimonials-container ul li:hover .testimonial-item-desc {
+.testimonials-container ul li:hover .testimonial-item-desc,
+.testimonials-container ul li:hover .testimonial-item-title {
   color: #e1dfe7;
 }
 
-.testimonials-container ul li:hover .testimonial-item-title {
-  color: #000;
-}
-
 .testimonial-item-title {
-  color: #616161;
+  color: #fff;
   padding-top: 3em;
   line-height: 1.3;
   font-weight: 500;
   font-size: 1rem;
+}
+
+.testimonial-item-title:hover .testimonial-item-name,
+.testimonial-item-title:active .testimonial-item-name,
+.testimonial-item-title:hover .testimonial-item-position,
+.testimonial-item-title:active .testimonial-item-position {
+  font-weight: 700;
 }
 
 .testimonial-item-desc {
@@ -446,6 +422,36 @@ header nav ul li a {
 }
 
 /* ==========
+   Subteam Section 
+   ========== */
+.subteam-container {
+  background: rgba(51, 51, 59, 0.4);
+  border-radius: 13px;
+  height: 200px;
+  padding: 2em;
+}
+
+.subteam-container h1 {
+  font-size: 2rem;
+}
+
+.subteam-item a {
+  background: rgba(230, 128, 45, 0.56);
+  padding: .5em .12em;
+  border-radius: 13px;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+.subteam-container:hover a:hover,
+.subteam-container:hover a:active,
+.subteam-container:active a:hover,
+.subteam-container:active a:active {
+  font-weight: 600;
+  background: rgba(230, 128, 45, 0.56);
+}
+
+/* ==========
    Community Links
    ========== */
 .cl-container {
@@ -473,20 +479,19 @@ header nav ul li a {
 }
 
 .links-container a {
-  color: #fff;
+  color: #e1dfe7;
   font-weight: normal;
+  padding: .7em;
+  margin: .2em;
+  border-radius: 13px;
+  background: rgba(51, 51, 59, 0.56);
+  text-transform: uppercase;
 }
 
-.cl-container:hover,
-.cl-container:active {
-  background: rgba(230, 128, 45, 0.56);
-}
-
-.cl-container:hover a:hover,
-.cl-container:hover a:active,
-.cl-container:active a:hover,
-.cl-container:active a:active {
+.cl-container a:hover,
+.cl-container a:active {
   font-weight: 600;
+  background: rgba(230, 128, 45, 0.56);
 }
 
 /* ==========
@@ -605,6 +610,7 @@ header nav ul li a {
 
 @media only screen and (min-width: 900px) {
   .row-2 {
+    padding: 2em 1em;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 45% 50%;
@@ -616,9 +622,6 @@ header nav ul li a {
     border-radius: 10px;
     width: 300px;
     display: block;
-  }
-  .row-2:hover .row-2 {
-    background: rgba(230, 128, 45, 0.56);
   }
 }
 
@@ -722,6 +725,16 @@ header nav ul li a {
     height: 150px;
     width: 150px;
     margin: 1em auto;
+  }
+  .subteam-container {
+    border-radius: 13px;
+    height: 200px;
+    padding: 2em;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 48% 52%;
+        grid-template-columns: 48% 52%;
+    place-content: center;
   }
   .cl-container {
     border-radius: 13px;
