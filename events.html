@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/header/header-style.css">
 	<link rel="stylesheet" href="css/footer/footer-style.css">
-        <!-- jQuery -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <!-- jQuery -->
         <!-- <script src="js/events-js/jquery-3.3.1.min.js"></script>  -->
     <script src="https://code.jquery.com/jquery-3.4.0.js"></script>
     <script>
@@ -16,7 +18,7 @@
                     var name = $(this).attr("data-filter");
                     if(name == "all"){
                         $(".filter").show("2000");
-                
+
                     }else{
                         $(".filter").not("." + name).hide("1000");
                         $(".filter").filter("." + name).show("5000");
@@ -27,8 +29,9 @@
             });
 
             });
-        </script>   
-    
+
+        </script>
+
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
@@ -43,7 +46,7 @@
         font-size: .86rem;
     }
     a{
-        
+
     }
     ul{
         margin: 0;
@@ -98,7 +101,7 @@
         align-items: center;
         justify-content: center;
     }
-    
+
     .card *{
         box-sizing: border-box;
     }
@@ -129,7 +132,7 @@
     }
 
     .front{
-        display: block;  
+        display: block;
     }
 
     .back{
@@ -201,7 +204,25 @@
         color: #fff;
         text-shadow: 0 0 1px #333;
     }
+
+    #btnScrollToTop {
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #fff;
+        box-shadow: 0 0 10px rgb(0, 0, 0, 0, 0.25);
+        color: rgb(7, 7, 7);
+        outline: none;
+    }
+
+    #btnScrollToTop:active {
+        background:rgba(51, 51, 59, .2)
+    }
 </style>
+
 <body>
     <section>
         <div class="container">
@@ -209,6 +230,7 @@
             <div class="row" style="text-align: center;">
                 <div class="navigation">
                         <a href="#" class="button active" data-filter="all">All</a>
+                        <a href="#" class="button" data-filter="0">Upcoming Events</a>
                         <a href="#" class="button" data-filter="1">Open Source</a>
                         <a href="#" class="button" data-filter="2">Cyber security</a>
                         <a href="#" class="button" data-filter="3">Web Development</a>
@@ -218,6 +240,7 @@
                         <a href="#" class="button" data-filter="7">Hackathon</a>
                         <a href="#" class="button" data-filter="8">DS and ML</a>
                         <a href="#" class="button" data-filter="9">Advaya</a>
+                        <a href="#" class="button" data-filter="10">APP Development</a>
                 </div>
             </div>
 
@@ -228,14 +251,60 @@
         <div class="container">
             <div class="boxesContainer">
 
-   
+                <div class="cardBox filter all">
+                    <div class="card">
+                    <div class="front">
+                        <img src="acm_events_main-main/images/orientation.jpg" alt="ACM Orientation" class="image-fluid">
+                    </div>
+                    <div class="back">
+                    	<div class="back-text">
+                        <h3 class="card-title">ACM Orientation</h3>
+                        <p class="card-text"> Organized by Amandeep Kaur, Srinidhi Ayyagari, Drishti Gupta, Soumya Sharma, Muskan Lalit, Tanya Garg, Astika
+                            .</p>
+                        <a href="acm_events_main-main/28-orientation.html">Read More</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="cardBox filter all">
+                    <div class="card">
+                    <div class="front">
+                        <img src="acm_events_main-main/images/mastering.jpg" alt="Mastering The Masters" class="image-fluid">
+                    </div>
+                    <div class="back">
+                    	<div class="back-text">
+                        <h3 class="card-title">Mastering the Masters - A roadmap to MS abroad
+                        </h3>
+                        <p class="card-text"> Organized by Tamanna Verma, Quanta Gupta, Bhanupriya Sharma, Avni Uplabdhee, Abhigya verma, Priya Chaturvedi, Nehal Kohli, Nidhi Yadav
 
+                            .</p>
+                        <a href="acm_events_main-main/29-mastering.html">Read More</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+
+                <div class="cardBox filter 0">
+                    <div class="card">
+                    <div class="front">
+                        <img src="acm_events_main-main/images/advaya.png" alt="ACM Summer Workshop on DS and ML - Keynote Talk by Prof. K K Biswas" class="image-fluid">
+                    </div>
+                    <div class="back">
+                    	 <div class="back-text">
+                        <h3 class="card-title">All about Advaya</h3>
+                        <p class="card-text">Event Publicity poster</p>
+                        <a href="acm_events_main-main/24_All about Advaya.html">Read More</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
                     <!---Item 1-->
-                   
+
                         <div class="cardBox filter 1">
                             <div class="card">
                                 <div class="front">
-                                    <img src="img/past-workshops/hacktober.png" alt="Hacktober Series" class="image-fluid">
+                                    <img src="acm_events_main-main/images/openseries.jpg" alt="Hacktober Series" class="image-fluid">
                                 </div>
                                 <div class="back">
                                     <div class="back-text">
@@ -246,10 +315,10 @@
                                     </div>
                                 </div>
                             </div>
-                       
-                   
+
+
                 <!---Item 2-->
-                
+
                 <div class="cardBox filter 2">
                     <div class="card">
                     <div class="front">
@@ -295,7 +364,7 @@
                     </div>
                     </div>
                 </div>
-          
+
 
                 <!---Item 2-->
                 <div class="cardBox filter 3">
@@ -361,7 +430,7 @@
             </div>
 
                 <!--Item 3-->
-                <div class="cardBox filter 7">
+                <div class="cardBox filter 1">
                     <div class="card">
                     <div class="front">
                         <img src="acm_events_main-main/images/beyondhack.jpeg" alt="Beyond Hacktoberfest" class="image-fluid">
@@ -376,7 +445,7 @@
                 </div>
             </div>
 
-                <div class="cardBox filter 7">
+                <div class="cardBox filter 1">
                     <div class="card">
                     <div class="front">
                         <img src="acm_events_main-main/images/hack2020.jpeg" alt="Hacktoberfest 2020" class="image-fluid">
@@ -432,7 +501,7 @@
                     	 <div class="back-text">
                         <h3 class="card-title">Free Webinar on Machine Learning using Python</h3>
                         <p class="card-text">Learn how to develop Machine Learning Models</p>
-                        <a href="acm_events_main-main/11_Free Webinar on Machine Learning Using Python.html">Read More</a>
+                        <a href="acm_events_main-main/11_Free Webinar on Machine Learning using Python.html">Read More</a>
                     </div>
                     </div>
                 </div>
@@ -452,7 +521,7 @@
                     </div>
                 </div>
             </div>
- 
+
                 <!--Item 3-->
                 <div class="cardBox filter 8">
                     <div class="card">
@@ -483,7 +552,7 @@
                     </div>
                 </div>
             </div>
-     
+
                 <!---Item 2-->
                 <div class="cardBox filter 8">
                     <div class="card">
@@ -499,7 +568,7 @@
                     </div>
                 </div>
             </div>
-     
+
                 <!--Item 3-->
                 <div class="cardBox filter 8">
                     <div class="card">
@@ -531,7 +600,7 @@
                     </div>
                 </div>
             </div>
-      
+
                 <!---Item 2-->
                 <div class="cardBox filter 8">
                     <div class="card">
@@ -547,7 +616,7 @@
                     </div>
                 </div>
             </div>
-      
+
                 <!--Item 3-->
                 <div class="cardBox filter 8">
                     <div class="card">
@@ -578,7 +647,7 @@
                     </div>
                 </div>
             </div>
-         
+
                 <!---Item 2-->
                 <div class="cardBox filter 8">
                     <div class="card">
@@ -594,7 +663,7 @@
                     </div>
                 </div>
             </div>
-         
+
                 <!--Item 3-->
                 <div class="cardBox filter 9">
                     <div class="card">
@@ -625,7 +694,7 @@
                     </div>
                 </div>
             </div>
-          
+
                 <!---Item 2-->
                 <div class="cardBox filter 9">
                     <div class="card">
@@ -641,10 +710,26 @@
                     </div>
                 </div>
             </div>
-          
-                    
-            
-       
+
+            <div class="cardBox filter 10">
+                <div class="card">
+                <div class="front">
+                    <img src="acm_events_main-main/images/flutter.jpg" alt="flutter event" class="image-fluid">
+                </div>
+                <div class="back">
+                     <div class="back-text">
+                    <h3 class="card-title">Flutter Event</h3>
+                    <p class="card-text"> Building Smart Cross Platform Application by Flutter using ML toolkit and tensorflow.
+                    </p>
+                    <a href="acm_events_main-main/27_flutter.html">Read More</a>
+                </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
             </div>
             <!--.boxesContainer-->
 
@@ -652,6 +737,20 @@
     </section>
 
     <script src="js/main.js"></script>
+
+    <!-- scroll to top button -->
+    <button id = "btnScrollToTop">
+        <i class="material-icons">arrow_upward</i>
+    </button>
+
+    <script>
+        const btnScrollToTop = document.querySelector("#btnScrollToTop");
+         btnScrollToTop.addEventListener("click", function () {
+            window.scrollTo(0,0); }
+        );
+   </script>
+
+
 
 </body>
 
