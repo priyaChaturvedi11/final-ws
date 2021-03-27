@@ -103,16 +103,12 @@ img {
   color: #fff;
 }
 
-.fa-linkedin-in {
-  color: black;
+.fab {
+  color: #fff;
 }
 
-.fa-github {
-  color: black;
-}
-
-.fa-user-circle {
-  color: black;
+.fab:hover {
+  color: #000;
 }
 
 .col-sm-6 {

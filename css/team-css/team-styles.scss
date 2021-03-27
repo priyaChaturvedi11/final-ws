@@ -102,17 +102,22 @@ img {
   color: #fff;
 }
 
-.fa-linkedin-in {
-  color: black;
+// .fa-linkedin-in,
+// .fa-github {
+//    color: #fff;
+//  }
+
+ .fab {
+   color: #fff;
+ }
+
+.fab:hover{
+    color: #000;
 }
 
-.fa-github {
-  color: black;
-}
-
-.fa-user-circle{
-  color: black;
-}
+// .fa-user-circle{
+//   color: black;
+// }
 
 .col-sm-6 {
   margin: 0 auto;
