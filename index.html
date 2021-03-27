@@ -4,6 +4,8 @@
       
       
     <!-- Global site tag (gtag.js) - Google Analytics -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114661744-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -375,25 +377,47 @@
                 <p class="testimonial-item-position">Facebook <br>
                 California, US</p>
               </div>
+          <!--------  
+          </li>
+          <li class="testimonial-item">
+            <div class="testimonial-item-image-container">
+              <img src="img/testimonials/Rachiyata.jpg" alt="">
+            </div>
+
+            <p class="testimonial-item-desc desc">
+
+            </p><div class="testimonial-item-title">
+                <p class="testimonial-item-name">Rachayita Giri</p>
+                <p class="testimonial-item-position">California State University</p>
+              </div>
+            
+          </li>
+          <li class="testimonial-item">
+            <div class="testimonial-item-image-container">
+              <img src="img/testimonials/Rachiyata.jpg" alt="">
+            </div>
+              <p class="testimonial-item-desc desc"><              </p><div class="testimonial-item-title">
+                <p class="testimonial-item-name">Rachayita Giri</p>
+                <p class="testimonial-item-position">California State University</p>
+              </div>
+            
+          </li>
+          <li class="testimonial-item">
+            <div class="testimonial-item-image-container">
+              <img src="img/testimonials/Rachiyata.jpg" alt="">
+            </div>
+              <p class="testimonial-item-desc desc"><              </p><div class="testimonial-item-title">
+                <p class="testimonial-item-name">Rachayita Giri</p>
+                <p class="testimonial-item-position">California State University</p>
+              </div>
+            
+          </li>
+          -->
         </ul>
       </div>
 
     </section>
     <!-- TESTIMONIAL SECTION ENDS -->
-
-    <!-- SUBTEAM SECTION BEGINS -->
-    <section class="community-links">
-      <div class="subteam-container">
-        <div class="links-container subteam-item">
-          <a class="cl-link-item" href="subTeam.html" target="_blank" class="cl">Meet them</a>
-        </div>
-        <h1 class="community-links-title title blue-white-title">Hear about us from our team!</h1>
-      </div>
-    </section>
-    <!-- SUBTEAM SECTION ENDS -->
-
-
-
 
     <!-- COMMUNITY LINKS SECTION BEGINS -->
     <section class="community-links">
@@ -402,7 +426,6 @@
         <div class="links-container">
           <a class="cl-link-item" href="https://campus2.acm.org/public/qj/quickjoin/qj_control.cfm?promo=PWEBTOP&form_type=Student" target="_blank" class="cl">ACM Membership Benefits</a>
           <a class="cl-link-item" href="https://www.acm.org/membership/membership-benefits" target="_blank" class="cl">ACM India Student Membership</a>
-          <a class="cl-link-item" href="https://campus2.acm.org/public/qj/quickjoin/qj_control.cfm?promo=PWEBTOP&form_type=Student" target="_blank" class="cl">Join Our Discord Server</a>
         </div>
   
       </div>
@@ -413,7 +436,7 @@
     <section class="footer">
       <div class="footer-container">
         <div class="footer-images">
-          <img src="img/igdtuwlogo.jpg" alt="IGDTUW Logo">  
+          <img src="img/past workshops/igdtuwlogo.jpg" alt="IGDTUW Logo">  
         </div>
         <p class="footer-desc desc">ACM Student Chapter at IGDTUW is the technical society at Department of Information Technology, IGDTUW. It is student driven society where active student members organize plethora of events during the semester.</p>
         <div class="footer-social">
@@ -439,14 +462,15 @@
     <!--JS Files -->
     <script src="js/wow.min.js"></script>
     <script>
-      var wow = new WOW({
-        boxClass: 'wow',
-        animateClass: 'animate__animated',
-        offset: 200,
-        mobile: true,
-        live: true
-      });
-      wow.init();
+  //      new WOW().init();
+  var wow = new WOW({
+    boxClass: 'wow',
+    animateClass: 'animate__animated',
+    offset: 200,
+    mobile: true,
+    live: true
+  });
+  wow.init();
     </script>
 
 
@@ -477,6 +501,18 @@
           }
       });
     </script>
+
+     <!-- scroll to top button -->
+     <button id = "btnScrollToTop">
+      <i class="material-icons">arrow_upward</i>
+  </button>
+
+  <script>
+      const btnScrollToTop = document.querySelector("#btnScrollToTop");
+       btnScrollToTop.addEventListener("click", function () {
+          window.scrollTo(0,0); }
+      );
+ </script>
 
   </body>
 
