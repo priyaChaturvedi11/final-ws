@@ -44,7 +44,7 @@
     <!-- Owl Carousel -->
     <script type="text/javascript" src="js/index-js/owl.carousel.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/index-css/owl.carousel.css">
-  
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
  <!--
 
@@ -478,6 +478,17 @@
       });
     </script>
 
+   <!-- scroll to top button -->
+   <button id = "btnScrollToTop">
+    <i class="material-icons">arrow_upward</i>
+</button>
+
+<script>
+    const btnScrollToTop = document.querySelector("#btnScrollToTop");
+     btnScrollToTop.addEventListener("click", function () {
+        window.scrollTo(0,0); }
+    );
+</script>
   </body>
 
 </html>
