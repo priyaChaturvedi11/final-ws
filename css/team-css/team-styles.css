@@ -103,13 +103,18 @@ img {
   color: #fff;
 }
 
-.fab {
-  color: #fff;
+.fa-linkedin-in {
+  color: #5AB2CD;
 }
 
-.fab:hover {
-  color: #000;
+.fa-github {
+  color: #5AB2CD;
 }
+
+.fa-user-circle {
+  color: #5AB2CD;
+}
+
 
 .col-sm-6 {
   margin: 0 auto;
